@@ -21,4 +21,9 @@ def encode_vigenere(message, secret):
         if(message[i].isupper()):
             number = 65 + (ord(message[i]) + ord(secret[i%len(secret)]) - 2*65) % 26
             newmsg += chr(number)
+        elif(message[i].islower()):
+            number = 97 + (ord(message[i]) + ord(secret[i%len(secret)]) - 2*97) % 26
+            newmsg += chr(number)
+        else:
+            newmsg += message[i]
     return newmsg
