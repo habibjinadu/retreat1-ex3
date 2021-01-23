@@ -15,6 +15,7 @@ def shuffle_axis(secret):
     number += len(secret)
     #number = number % len(message)
     print("axis of rotation for : " + secret + " is " + str(number))
+    # (ﾉ ͡° ͜ʖ ͡°)ﾉ ‥…━━━★
     return number
 
 def do_shuffle(message, axis):
@@ -22,4 +23,10 @@ def do_shuffle(message, axis):
     
     message.reverse()
     
+    # (ﾉ ͡° ͜ʖ ͡°)ﾉ ‥…━━━★
+    def shift(seq, n):
+        a = n % len(seq)
+        return seq[-a:] + seq[:-a]
+    
+    message = shift(message, axis)
     return ''.join(message)
