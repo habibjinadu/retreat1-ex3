@@ -2,7 +2,7 @@
 
 def encode_shuffle(message, secret):
     shuffled_string = do_shuffle(message, shuffle_axis(secret))
-    return ""
+    return shuffled_string
 
 def decode_shuffle(message, secret):
     shuffled_string = do_shuffle(message, shuffle_axis(secret))
